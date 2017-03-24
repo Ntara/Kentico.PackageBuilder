@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageBuilder", "Kentico-9.0\PackageBuilder.Console\PackageBuilder.csproj", "{5036D203-4833-4C89-A736-11CA4E45B281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageBuilder.Test", "Kentico-9.0\PackageBuilder.Test\PackageBuilder.Test.csproj", "{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PackageBuilder.Common", "Common\PackageBuilder.Common.shproj", "{7707E815-8D43-4EEC-B0F4-C441DD40FEFC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PackageBuilder.Common.Test", "Common.Test\PackageBuilder.Common.Test.shproj", "{9F61E9EB-25E7-408D-A828-2E1AF4353E24}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Common\PackageBuilder.Common.projitems*{5036d203-4833-4c89-a736-11ca4e45b281}*SharedItemsImports = 4
+		Common\PackageBuilder.Common.projitems*{7707e815-8d43-4eec-b0f4-c441dd40fefc}*SharedItemsImports = 13
+		Common.Test\PackageBuilder.Common.Test.projitems*{5c2ab6cf-6720-407d-a6cb-7bdd7dda888b}*SharedItemsImports = 4
+		Common.Test\PackageBuilder.Common.Test.projitems*{9f61e9eb-25e7-408d-a828-2e1af4353e24}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 4.5|Any CPU = Debug 4.5|Any CPU
+		Debug 4.6|Any CPU = Debug 4.6|Any CPU
+		Release 4.5|Any CPU = Release 4.5|Any CPU
+		Release 4.6|Any CPU = Release 4.6|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Debug 4.5|Any CPU.ActiveCfg = Debug 4.5|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Debug 4.5|Any CPU.Build.0 = Debug 4.5|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Debug 4.6|Any CPU.ActiveCfg = Debug 4.6|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Debug 4.6|Any CPU.Build.0 = Debug 4.6|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{5036D203-4833-4C89-A736-11CA4E45B281}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Debug 4.5|Any CPU.ActiveCfg = Debug 4.5|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Debug 4.5|Any CPU.Build.0 = Debug 4.5|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Debug 4.6|Any CPU.ActiveCfg = Debug 4.6|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Debug 4.6|Any CPU.Build.0 = Debug 4.6|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{5C2AB6CF-6720-407D-A6CB-7BDD7DDA888B}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

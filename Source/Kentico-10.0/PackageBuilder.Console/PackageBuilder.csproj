@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug 4.6</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ntara.PackageBuilder</RootNamespace>
+    <AssemblyName>PackageBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.5|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net45\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET_45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\net45\PackageBuilder.xml</DocumentationFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.6|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net46\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET_46</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\net46\PackageBuilder.xml</DocumentationFile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 4.5|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net45\</OutputPath>
+    <DefineConstants>TRACE;NET_45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\net45\PackageBuilder.xml</DocumentationFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 4.6|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net46\</OutputPath>
+    <DefineConstants>TRACE;NET_46</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\net46\PackageBuilder.xml</DocumentationFile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SharedKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Base, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.Base.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.Core.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.DataEngine.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.Helpers.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ImportExport, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.ImportExport.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.IO.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Modules, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-10.0\Net45\CMS.Modules.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-10.0\Net46\CMS.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.8.50506.491, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dependencies\Kentico-10.0\Common\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KenticoResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KenticoResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Kentico\ModuleDataProvider.cs" />
+    <Compile Include="Kentico\ModuleExportPackageBuilder.cs" />
+    <Compile Include="Kentico\ModuleFile.cs" />
+    <Compile Include="Kentico\ModuleFilePathRule.cs" />
+    <Compile Include="Kentico\ModuleFileResolver.cs" />
+    <Compile Include="Kentico\ModuleFileResolverBase.cs" />
+    <Compile Include="Kentico\ModuleInstallationMetaDataBuilder.cs" />
+    <Compile Include="Kentico\ModulePathRuleResolver.cs" />
+    <Compile Include="Kentico\ModulePathRuleResolverContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonResources.Designer.cs">
+      <DependentUpon>CommonResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SharedKey.snk" />
+    <None Include="PackageBuilder.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KenticoResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KenticoResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="..\..\Common\PackageBuilder.Common.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

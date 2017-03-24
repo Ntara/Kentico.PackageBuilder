@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationException_AssemblyVersionNotResolved" xml:space="preserve">
+    <value>The module version could not be resolved from assembly '{0}' for type '{1}'.</value>
+  </data>
+  <data name="ArgumentException_AssemblyNullOrEmpty" xml:space="preserve">
+    <value>The reference assembly cannot be null or empty.</value>
+  </data>
+  <data name="ArgumentException_CustomSystemModuleNotAllowed" xml:space="preserve">
+    <value>Installation package can not be created for module CMS.CustomSystemModule</value>
+  </data>
+  <data name="ArgumentException_DevelopmentModuleOnly" xml:space="preserve">
+    <value>Installation package can be created only when module is currently in development.</value>
+  </data>
+  <data name="ArgumentException_OutputDirectoryNullOrEmpty" xml:space="preserve">
+    <value>The output directory cannot be null or empty.</value>
+  </data>
+  <data name="ArgumentException_ModuleVersionRequired" xml:space="preserve">
+    <value>A valid module version is required.</value>
+  </data>
+  <data name="ArgumentNullException_Module" xml:space="preserve">
+    <value>A valid module is required and cannot be null.</value>
+  </data>
+  <data name="ArgumentNullException_ModuleMetadata" xml:space="preserve">
+    <value>Module metdata is required and cannot be null.</value>
+  </data>
+  <data name="ArgumentNullException_VersionResolver" xml:space="preserve">
+    <value>A valid version resolver is required and cannot be null.</value>
+  </data>
+  <data name="CommandLine_Debug_Description" xml:space="preserve">
+    <value>Display detailed error and stacktrace information.</value>
+  </data>
+  <data name="CommandLine_Metadata_Description" xml:space="preserve">
+    <value>Overrides generated NuSpec metadata properties.</value>
+  </data>
+  <data name="CommandLine_Metadata_SectionTitle" xml:space="preserve">
+    <value>Supported Metadata:</value>
+  </data>
+  <data name="CommandLine_MetadataObject_Id_Description" xml:space="preserve">
+    <value>The unique identifier for the package.</value>
+  </data>
+  <data name="CommandLine_MetadataObject_Title_Description" xml:space="preserve">
+    <value>The human-friendly title for the package.</value>
+  </data>
+  <data name="CommandLine_MetadataObject_Authors_Description" xml:space="preserve">
+    <value>A comma-separated list of authors for the package source code.</value>
+  </data>
+  <data name="CommandLine_MetadataObject_Description_Description" xml:space="preserve">
+    <value>The long description for the package.</value>
+  </data>
+  <data name="CommandLine_Module_Description" xml:space="preserve">
+    <value>Module code name (required).</value>
+  </data>
+  <data name="CommandLine_NuSpecFile_Description" xml:space="preserve">
+    <value>NuSpec file path (absolute or relative to the CMS root).</value>
+  </data>
+  <data name="CommandLine_OutputDirectory_Description" xml:space="preserve">
+    <value>Package output directory. The default path is 'CMSSiteUtils/Export'.</value>
+  </data>
+  <data name="CommandLine_Properties_Description" xml:space="preserve">
+    <value>Defines a set of property tokens where each occurrence of $token$ in the specified NuSpec file will be replaced with the given value.</value>
+  </data>
+  <data name="CommandLine_Version_Description" xml:space="preserve">
+    <value>Sets the package version explicitly or resolves the version by assembly attribute.</value>
+  </data>
+  <data name="CommandLine_Version_SectionTitle" xml:space="preserve">
+    <value>Supported Versions:</value>
+  </data>
+  <data name="CommandLine_VersionObject_Assembly_Description" xml:space="preserve">
+    <value>The target assembly from which to extract version information.</value>
+  </data>
+  <data name="CommandLine_VersionObject_AssemblyAttribute_Description" xml:space="preserve">
+    <value>The assembly version attribute to target ('AssemblyVersion', 'AssemblyFileVersion' (default), and 'AssemblyInformationalVersion' are supported).</value>
+  </data>
+  <data name="CommandLine_VersionObject_Value_Description" xml:space="preserve">
+    <value>The version of the package, following the major.minor.patch pattern.
+
+</value>
+  </data>
+  <data name="CommandLineArgumentException_AlreadyDefined" xml:space="preserve">
+    <value>Command argument '{0}' has already been defined.</value>
+  </data>
+  <data name="CommandLineArgumentException_ModuleRequired" xml:space="preserve">
+    <value>A valid module name is required.</value>
+  </data>
+  <data name="CommandLineArgumentException_NotRecognized" xml:space="preserve">
+    <value>Command argument '{0}' is not a recognized parameter.</value>
+  </data>
+  <data name="CommandLineArgumentPropertyException_AlreadyDefined" xml:space="preserve">
+    <value>Command argument property '{0}' has already been defined.</value>
+  </data>
+  <data name="CommandLineArgumentPropertyException_NotRecognized" xml:space="preserve">
+    <value>Command argument property '{0}' is not a recognized field.</value>
+  </data>
+  <data name="CommandLineArgumentPropertyException_UnknownValueType" xml:space="preserve">
+    <value>Command argument property value '{0}' is not a recognized type.</value>
+  </data>
+  <data name="FileNotFoundException_AssemblyNotFound" xml:space="preserve">
+    <value>The assembly file '{0}' could not be found.</value>
+  </data>
+  <data name="FileNotFoundException_NuSpecNotFound" xml:space="preserve">
+    <value>The NuSpec file '{0}' could not be found.</value>
+  </data>
+  <data name="ModuleNotFoundException_InvalidResource" xml:space="preserve">
+    <value>The module resource name '{0}' could not be resolved.</value>
+  </data>
+  <data name="NotSupportedException_UnknownAssemblyAttribute" xml:space="preserve">
+    <value>Assembly version attribute '{0}' is not a known version type.</value>
+  </data>
+  <data name="OutputHeader" xml:space="preserve">
+    <value>Package Builder for Kentico ({0})
+Version {1}
+Copyright (c) Ntara, Inc. All rights reserved.</value>
+  </data>
+  <data name="Progress_BuildingPackage" xml:space="preserve">
+    <value>Building module package...</value>
+  </data>
+  <data name="Progress_BuildSuccess" xml:space="preserve">
+    <value>Module package created successfully.</value>
+  </data>
+  <data name="Progress_InitializingApplication" xml:space="preserve">
+    <value>Initializing application...</value>
+  </data>
+  <data name="Report_OutputDirectory" xml:space="preserve">
+    <value>Output Directory:</value>
+  </data>
+  <data name="Report_PackageName" xml:space="preserve">
+    <value>Package Name:</value>
+  </data>
+  <data name="ToolExamples" xml:space="preserve">
+    <value>{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -output:"Packages/Modules"
+
+{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -version:1.2.0-RC1
+
+{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -properties:company="Acme, Inc."
+
+{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -version:assembly="Company.Module.dll",assemblyAttribute="AssemblyInformationalVersion"
+
+{0} -module:Company.Module -metadata:id=Company.CustomId,title="Custom Title",description="Custom description here...",authors="Contributor1, Contributor2"</value>
+  </data>
+  <data name="ToolNotes" xml:space="preserve">
+    <value>The {0} application must execute from the 'bin' directory of a valid Kentico CMS installation. This allows the native module export to include all database objects, libraries, and file dependencies related to the specified module instance.
+
+More detailed information on Kentico module development may be found here:
+{1}</value>
+  </data>
+  <data name="ToolUsage" xml:space="preserve">
+    <value>{0} &lt;-module:&lt;codename&gt;&gt; [-nuspec:&lt;nuspecfile&gt;] [-output:&lt;path&gt;] [args ...]</value>
+  </data>
+  <data name="UnauthorizedAccessException_InsufficientWritePermissions" xml:space="preserve">
+    <value>Insufficient write permissions necessary for target path '{0}'.</value>
+  </data>
+</root>

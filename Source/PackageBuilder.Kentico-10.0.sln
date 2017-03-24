@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageBuilder", "Kentico-10.0\PackageBuilder.Console\PackageBuilder.csproj", "{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageBuilder.Test", "Kentico-10.0\PackageBuilder.Test\PackageBuilder.Test.csproj", "{0E77AFEF-BE4C-419F-B257-1736B674DB61}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PackageBuilder.Common", "Common\PackageBuilder.Common.shproj", "{7707E815-8D43-4EEC-B0F4-C441DD40FEFC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PackageBuilder.Common.Test", "Common.Test\PackageBuilder.Common.Test.shproj", "{9F61E9EB-25E7-408D-A828-2E1AF4353E24}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Common\PackageBuilder.Common.projitems*{8e9ad77b-f211-45fb-8daa-8fb654f9a0f2}*SharedItemsImports = 4
+		Common\PackageBuilder.Common.projitems*{7707e815-8d43-4eec-b0f4-c441dd40fefc}*SharedItemsImports = 13
+		Common.Test\PackageBuilder.Common.Test.projitems*{0e77afef-be4c-419f-b257-1736b674db61}*SharedItemsImports = 4
+		Common.Test\PackageBuilder.Common.Test.projitems*{9f61e9eb-25e7-408d-a828-2e1af4353e24}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 4.5|Any CPU = Debug 4.5|Any CPU
+		Debug 4.6|Any CPU = Debug 4.6|Any CPU
+		Release 4.5|Any CPU = Release 4.5|Any CPU
+		Release 4.6|Any CPU = Release 4.6|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Debug 4.5|Any CPU.ActiveCfg = Debug 4.5|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Debug 4.5|Any CPU.Build.0 = Debug 4.5|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Debug 4.6|Any CPU.ActiveCfg = Debug 4.6|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Debug 4.6|Any CPU.Build.0 = Debug 4.6|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{8E9AD77B-F211-45FB-8DAA-8FB654F9A0F2}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Debug 4.5|Any CPU.ActiveCfg = Debug 4.5|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Debug 4.5|Any CPU.Build.0 = Debug 4.5|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Debug 4.6|Any CPU.ActiveCfg = Debug 4.6|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Debug 4.6|Any CPU.Build.0 = Debug 4.6|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{0E77AFEF-BE4C-419F-B257-1736B674DB61}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
