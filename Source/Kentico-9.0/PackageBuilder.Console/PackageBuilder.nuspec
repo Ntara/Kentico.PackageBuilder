@@ -7,7 +7,7 @@
 		<authors>Ryan Christiansen</authors>
 		<copyright>Copyright © Ntara, Inc. 2017 All rights reserved.</copyright>
 		<iconUrl>https://ntara.github.io/icons/logo.png</iconUrl>
-		<projectUrl>https://github.com/Ntara/Kentico.Library/PackageBuilder</projectUrl>
+		<projectUrl>https://github.com/Ntara/Kentico.PackageBuilder</projectUrl>
 		<licenseUrl>https://ntara.github.io/license</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Command-line utility for creating Kentico module packages</description>
