@@ -22,9 +22,18 @@ namespace Ntara.PackageBuilder.Test
 		#region |-- Help Argument Tests --|
 
 		[TestMethod]
-		public void TestHelp()
+		public void TestHelp1()
 		{
 			const string commandLine = @"-help";
+			var expected = new CommandLine() { Help = true };
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestHelp2()
+		{
+			const string commandLine = @"-?";
 			var expected = new CommandLine() { Help = true };
 
 			AssertCommandLine(commandLine, expected);
