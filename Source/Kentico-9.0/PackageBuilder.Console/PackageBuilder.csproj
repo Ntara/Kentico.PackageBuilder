@@ -121,6 +121,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KenticoResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Kentico\InstallableModulesManager.cs" />
+    <Compile Include="Kentico\InstallableModulesState.cs" />
     <Compile Include="Kentico\ModuleDataProvider.cs" />
     <Compile Include="Kentico\ModuleExportPackageBuilder.cs" />
     <Compile Include="Kentico\ModuleFile.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Kentico\ModuleFileResolver.cs" />
     <Compile Include="Kentico\ModuleFileResolverBase.cs" />
     <Compile Include="Kentico\ModuleInstallationMetaDataBuilder.cs" />
+    <Compile Include="Kentico\ModuleInstallationState.cs" />
     <Compile Include="Kentico\ModulePathRuleResolver.cs" />
     <Compile Include="Kentico\ModulePathRuleResolverContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,7 +15,6 @@ using CMS.Base;
 using CMS.Modules;
 using CMS.Modules.NuGetPackages;
 
-using Ntara.PackageBuilder.Kentico;
 using NuGet;
 
 namespace Ntara.PackageBuilder
