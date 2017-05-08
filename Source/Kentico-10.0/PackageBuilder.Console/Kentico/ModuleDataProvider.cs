@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -11,6 +12,7 @@ namespace CMS.Modules
     /// <summary>
     /// Provides module objects of supported types from database.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleDataProvider
     {
         #region "Fields"

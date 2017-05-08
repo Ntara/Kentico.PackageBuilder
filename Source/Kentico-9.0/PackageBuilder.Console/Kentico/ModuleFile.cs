@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -7,6 +8,7 @@ namespace CMS.Modules
     /// <summary>
     /// Specifies module file that will be included in the module package.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleFile
     {
         /// <summary>

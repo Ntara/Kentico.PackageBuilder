@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -11,6 +12,7 @@ namespace CMS.Modules
     /// <summary>
     /// Allows you to resolve module path rule.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModulePathRuleResolver
     {
 

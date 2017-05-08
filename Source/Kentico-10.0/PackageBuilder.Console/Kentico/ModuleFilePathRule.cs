@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace CMS.Modules
     /// <summary>
     /// Specifies path where module files are located and where they are installed.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleFilePathRule
     {
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -7,6 +8,7 @@ namespace CMS.Modules
     /// <summary>
     /// Contains installation well-known states of modules.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal static class ModuleInstallationState
     {
         /// <summary>

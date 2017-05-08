@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -18,6 +19,7 @@ namespace CMS.Modules
     /// The package contains some useful DB objects supported by import/export.
     /// The package does not contain any files (those are handled by NuGet itself).
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleExportPackageBuilder
     {
         #region "Fields"

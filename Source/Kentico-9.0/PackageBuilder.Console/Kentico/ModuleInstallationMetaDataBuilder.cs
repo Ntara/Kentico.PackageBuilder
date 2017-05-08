@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -12,6 +13,7 @@ namespace CMS.Modules
     /// Builds meta data needed on target instance for module
     /// installation/uninstallation.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleInstallationMetaDataBuilder
     {
         #region "Fields"

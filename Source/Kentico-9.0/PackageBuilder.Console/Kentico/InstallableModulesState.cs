@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -13,6 +14,7 @@ namespace CMS.Modules
     /// <summary>
     /// State object containing information regarding installable modules.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class InstallableModulesState
     {
         #region "Fields"

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -12,6 +13,7 @@ namespace CMS.Modules
     /// <summary>
     /// Provides paths to all module files and folders which are needed during installation package creation.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModuleFileResolver : ModuleFileResolverBase
     {
 

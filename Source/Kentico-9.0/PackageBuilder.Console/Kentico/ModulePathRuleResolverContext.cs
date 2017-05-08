@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace CMS.Modules
     /// <summary>
     /// Specifies module path rule resolver's context.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal class ModulePathRuleResolverContext
     {
         /// <summary>
