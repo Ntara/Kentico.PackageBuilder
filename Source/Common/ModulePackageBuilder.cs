@@ -33,12 +33,12 @@ namespace Ntara.PackageBuilder
 		/// <summary>
 		/// The CMS root directory.
 		/// </summary>
-		protected readonly string RootPath;
+		protected string RootPath { get; }
 
 		/// <summary>
 		/// The resource information of the module being packaged.
 		/// </summary>
-		protected readonly ResourceInfo Module;
+		protected ResourceInfo Module { get; }
 
 		private ModulePackageMetadata _moduleMetadata;
 		private readonly IModuleVersionResolver _versionResolver;
