@@ -11,7 +11,7 @@ using System;
 namespace Ntara.PackageBuilder
 {
 	[AttributeUsage(AttributeTargets.Property)]
-	internal class ArgumentAttribute : Attribute
+	internal sealed class ArgumentAttribute : Attribute
 	{
 		public ArgumentAttribute(string name, string descriptionResourceName)
 		{

@@ -7,14 +7,22 @@
 // -----------------------------------------------------------
 
 using System;
+using System.Runtime.Serialization;
+using System.Security;
 
 namespace Ntara.PackageBuilder
 {
+	[Serializable]
 	internal class CommandLineArgumentException : ApplicationException
 	{
 		public CommandLineArgumentException(string argumentName, string message) : base(message)
 		{
 			ArgumentName = argumentName;
+		}
+
+		protected CommandLineArgumentException(SerializationInfo info, StreamingContext context) : base(info, context)
+		{
+			ArgumentName = info.GetString(nameof(ArgumentName));
 		}
 
 		public string ArgumentName { get; }
@@ -31,6 +39,14 @@ namespace Ntara.PackageBuilder
 
 				return base.Message;
 			}
+		}
+
+		[SecurityCritical]
+		public override void GetObjectData(SerializationInfo info, StreamingContext context)
+		{
+			base.GetObjectData(info, context);
+
+			info.AddValue(nameof(ArgumentName), ArgumentName);
 		}
 	}
 }
