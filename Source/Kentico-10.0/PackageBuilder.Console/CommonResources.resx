@@ -244,7 +244,13 @@ Copyright (c) Ntara, Inc. All rights reserved.</value>
   <data name="Report_PackageName" xml:space="preserve">
     <value>Package Name:</value>
   </data>
-  <data name="ToolExamples" xml:space="preserve">
+  <data name="SectionFormat" xml:space="preserve">
+    <value>{0}:</value>
+  </data>
+  <data name="ToolExamples_SectionTitle" xml:space="preserve">
+    <value>Examples:</value>
+  </data>
+  <data name="ToolExamples_Content" xml:space="preserve">
     <value>{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -output:"Packages/Modules"
 
 {0} -module:Company.Module -nuspec:"Company.Module.nuspec" -version:1.2.0-RC1
@@ -255,7 +261,10 @@ Copyright (c) Ntara, Inc. All rights reserved.</value>
 
 {0} -module:Company.Module -metadata:id=Company.CustomId,title="Custom Title",description="Custom description here...",authors="Contributor1, Contributor2"</value>
   </data>
-  <data name="ToolNotes" xml:space="preserve">
+  <data name="ToolNotes_SectionTitle" xml:space="preserve">
+    <value>Notes:</value>
+  </data>
+  <data name="ToolNotes_Content" xml:space="preserve">
     <value>The {0} application must execute from the 'bin' directory of a valid Kentico CMS installation. This allows the native module export to include all database objects, libraries, and file dependencies related to the specified module instance.
 
 More detailed information on Kentico module development may be found here:

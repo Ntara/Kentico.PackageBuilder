@@ -9,6 +9,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Ntara.PackageBuilder
 {
@@ -139,7 +140,7 @@ namespace Ntara.PackageBuilder
 
 		private void OnDuplicateArgumentProperty(string argumentName, string propertyName)
 		{
-			var errorMessage = string.Format(CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
+			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
 			throw new CommandLineArgumentPropertyException(argumentName, propertyName, errorMessage);
 		}
 

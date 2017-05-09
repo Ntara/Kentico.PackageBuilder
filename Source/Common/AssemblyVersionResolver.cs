@@ -7,6 +7,7 @@
 // -----------------------------------------------------------
 
 using System;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -55,7 +56,7 @@ namespace Ntara.PackageBuilder
 			// Assert assembly file exists
 			if (!File.Exists(assemblyFilePath))
 			{
-				var errorMessage = string.Format(CommonResources.FileNotFoundException_AssemblyNotFound, assemblyFilePath);
+				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.FileNotFoundException_AssemblyNotFound, assemblyFilePath);
 				throw new FileNotFoundException(errorMessage);
 			}
 
@@ -74,13 +75,13 @@ namespace Ntara.PackageBuilder
 					moduleVersion = moduleAssembly.GetName().Version.ToString();
 					break;
 				default:
-					var errorMessage = string.Format(CommonResources.NotSupportedException_UnknownAssemblyAttribute, _assemblyVersionType);
+					var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.NotSupportedException_UnknownAssemblyAttribute, _assemblyVersionType);
 					throw new NotSupportedException(errorMessage);
 			}
 
 			if (string.IsNullOrEmpty(moduleVersion))
 			{
-				var errorMessage = string.Format(CommonResources.ApplicationException_AssemblyVersionNotResolved, _assemblyFile, _assemblyVersionType);
+				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.ApplicationException_AssemblyVersionNotResolved, _assemblyFile, _assemblyVersionType);
 				throw new ApplicationException(errorMessage);
 			}
 

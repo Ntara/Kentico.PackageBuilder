@@ -8,6 +8,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -132,7 +133,7 @@ namespace Ntara.PackageBuilder
 
 			if (!CMS.IO.DirectoryHelper.CheckPermissions(outputDirectory))
 			{
-				var errorMessage = string.Format(CommonResources.UnauthorizedAccessException_InsufficientWritePermissions, outputDirectory);
+				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.UnauthorizedAccessException_InsufficientWritePermissions, outputDirectory);
 				throw new UnauthorizedAccessException(errorMessage);
 			}
 

@@ -434,6 +434,15 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}:.
+        /// </summary>
+        internal static string SectionFormat {
+            get {
+                return ResourceManager.GetString("SectionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -output:&quot;Packages/Modules&quot;
         ///
         ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -version:1.2.0-RC1
@@ -444,9 +453,18 @@ namespace Ntara.PackageBuilder {
         ///
         ///{0} -module:Company.Module -metadata:id=Company.CustomId,title=&quot;Custom Title&quot;,description=&quot;Custom [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ToolExamples {
+        internal static string ToolExamples_Content {
             get {
-                return ResourceManager.GetString("ToolExamples", resourceCulture);
+                return ResourceManager.GetString("ToolExamples_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Examples:.
+        /// </summary>
+        internal static string ToolExamples_SectionTitle {
+            get {
+                return ResourceManager.GetString("ToolExamples_SectionTitle", resourceCulture);
             }
         }
         
@@ -456,9 +474,18 @@ namespace Ntara.PackageBuilder {
         ///More detailed information on Kentico module development may be found here:
         ///{1}.
         /// </summary>
-        internal static string ToolNotes {
+        internal static string ToolNotes_Content {
             get {
-                return ResourceManager.GetString("ToolNotes", resourceCulture);
+                return ResourceManager.GetString("ToolNotes_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes:.
+        /// </summary>
+        internal static string ToolNotes_SectionTitle {
+            get {
+                return ResourceManager.GetString("ToolNotes_SectionTitle", resourceCulture);
             }
         }
         

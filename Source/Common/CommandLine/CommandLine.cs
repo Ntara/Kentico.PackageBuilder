@@ -8,6 +8,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Ntara.PackageBuilder
 {
@@ -231,7 +232,7 @@ namespace Ntara.PackageBuilder
 
 					if (!Enum.TryParse(property.Value, out versionType))
 					{
-						var errorMessage = string.Format(CommonResources.CommandLineArgumentPropertyException_UnknownValueType, property.Value);
+						var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_UnknownValueType, property.Value);
 						throw new CommandLineArgumentPropertyException(CommandLineArguments.Version, property.Key, errorMessage);
 					}
 
@@ -254,25 +255,25 @@ namespace Ntara.PackageBuilder
 
 		private void ThrowArgumentNotRecognized(string argumentName)
 		{
-			var errorMessage = string.Format(CommonResources.CommandLineArgumentException_NotRecognized, argumentName);
+			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentException_NotRecognized, argumentName);
 			throw new CommandLineArgumentException(argumentName, errorMessage);
 		}
 
 		private void ThrowArgumentNotRecognized(string argumentName, string propertyName)
 		{
-			var errorMessage = string.Format(CommonResources.CommandLineArgumentPropertyException_NotRecognized, propertyName);
+			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_NotRecognized, propertyName);
 			throw new CommandLineArgumentPropertyException(argumentName, propertyName, errorMessage);
 		}
 
 		private void ThrowArgumentAlreadyDefined(string argumentName)
 		{
-			var errorMessage = string.Format(CommonResources.CommandLineArgumentException_AlreadyDefined, argumentName);
+			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentException_AlreadyDefined, argumentName);
 			throw new CommandLineArgumentException(argumentName, errorMessage);
 		}
 
 		private void ThrowArgumentPropertyAlreadyDefined(string argumentName, string propertyName)
 		{
-			var errorMessage = string.Format(CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
+			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
 			throw new CommandLineArgumentPropertyException(argumentName, propertyName, errorMessage);
 		}
 

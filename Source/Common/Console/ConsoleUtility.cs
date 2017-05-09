@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -25,7 +26,7 @@ namespace Ntara.PackageBuilder
 		public static void WriteHeader()
 		{
 			var versionInfo = GetConsoleVersionInfo();
-			var helpHeader = string.Format(CommonResources.OutputHeader, versionInfo.OriginalFilename, versionInfo.ProductVersion);
+			var helpHeader = string.Format(CultureInfo.CurrentCulture, CommonResources.OutputHeader, versionInfo.OriginalFilename, versionInfo.ProductVersion);
 
 			ConsoleWriter.WriteMessage(helpHeader);
 		}
@@ -35,7 +36,7 @@ namespace Ntara.PackageBuilder
 			var versionInfo = GetConsoleVersionInfo();
 
 			// Write command-line usage
-			var toolUsage = string.Format(CommonResources.ToolUsage, versionInfo.OriginalFilename);
+			var toolUsage = string.Format(CultureInfo.CurrentCulture, CommonResources.ToolUsage, versionInfo.OriginalFilename);
 			ConsoleWriter.WriteMessage(Environment.NewLine + toolUsage);
 
 			// Write command-line argument usage table
@@ -49,13 +50,17 @@ namespace Ntara.PackageBuilder
 			WriteArgumentObject<CommandLineVersion>(CommonResources.CommandLine_Version_SectionTitle);
 
 			// Write notes
-			ConsoleWriter.WriteMessage(Environment.NewLine + "Notes:" + Environment.NewLine);
-			var toolNotes = string.Format(CommonResources.ToolNotes, versionInfo.OriginalFilename, KenticoResources.KenticoHelpUrl);
+			ConsoleWriter.NewLine();
+			ConsoleWriter.WriteMessage(CommonResources.ToolNotes_SectionTitle);
+			ConsoleWriter.NewLine();
+			var toolNotes = string.Format(CultureInfo.CurrentCulture, CommonResources.ToolNotes_Content, versionInfo.OriginalFilename, KenticoResources.KenticoHelpUrl);
 			WriteWrappedMessage(toolNotes, ConsoleWriter.WriteMessage, DefaultIndent);
 
 			// Write examples
-			ConsoleWriter.WriteMessage(Environment.NewLine + "Examples:" + Environment.NewLine);
-			var toolExamples = string.Format(CommonResources.ToolExamples, versionInfo.OriginalFilename);
+			ConsoleWriter.NewLine();
+			ConsoleWriter.WriteMessage(CommonResources.ToolExamples_SectionTitle);
+			ConsoleWriter.NewLine();
+			var toolExamples = string.Format(CultureInfo.CurrentCulture, CommonResources.ToolExamples_Content, versionInfo.OriginalFilename);
 			WriteWrappedMessage(toolExamples, ConsoleWriter.WriteMessage, DefaultIndent, DefaultIndent);
 		}
 
@@ -111,7 +116,7 @@ namespace Ntara.PackageBuilder
 				messageOverflow = message.Substring(messagePart.Length);
 
 				// Trim leading newline character(s)
-				if (messageOverflow.StartsWith(Environment.NewLine))
+				if (messageOverflow.StartsWith(Environment.NewLine, StringComparison.Ordinal))
 				{
 					messageOverflow = messageOverflow.Substring(2);
 				}

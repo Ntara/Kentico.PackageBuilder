@@ -9,6 +9,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 using CMS.Modules.NuGetPackages;
@@ -73,7 +74,7 @@ namespace Ntara.PackageBuilder
 
 			if (!File.Exists(nuspecFilePath))
 			{
-				var errorMessage = string.Format(CommonResources.FileNotFoundException_NuSpecNotFound, nuspecFilePath);
+				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.FileNotFoundException_NuSpecNotFound, nuspecFilePath);
 				throw new FileNotFoundException(errorMessage);
 			}
 

@@ -8,6 +8,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -68,7 +69,7 @@ namespace Ntara.PackageBuilder
 
 				if (module == null)
 				{
-					var errorMessage = string.Format(CommonResources.ModuleNotFoundException_InvalidResource, commandLine.Module);
+					var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.ModuleNotFoundException_InvalidResource, commandLine.Module);
 					throw new ModuleNotFoundException(errorMessage);
 				}
 
@@ -158,8 +159,8 @@ namespace Ntara.PackageBuilder
 				if (debug)
 				{
 					// Write exception type
-					var typeMessage = exception.GetType().FullName;
-					ConsoleWriter.WriteErrorDetail(Environment.NewLine + typeMessage + ":");
+					var exceptionSectionTitle = string.Format(CultureInfo.CurrentCulture, CommonResources.SectionFormat, Environment.NewLine + exception.GetType().FullName);
+					ConsoleWriter.WriteErrorDetail(exceptionSectionTitle);
 
 					// Write exception stack trace
 					ConsoleUtility.WriteWrappedMessage(exception.StackTrace, ConsoleWriter.WriteErrorDetail, 0, 6);

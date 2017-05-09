@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,13 +7,14 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Package Builder for Kentico 10")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Package Builder for Kentico Modules")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ntara, Inc.")]
 [assembly: AssemblyProduct("Package Builder")]
 [assembly: AssemblyCopyright("Copyright © Ntara, Inc. 2017")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+
+[assembly: NeutralResourcesLanguage("en")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
