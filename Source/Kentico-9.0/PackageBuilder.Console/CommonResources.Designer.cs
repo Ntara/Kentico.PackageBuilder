@@ -124,7 +124,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Module metdata is required and cannot be null..
+        ///   Looks up a localized string similar to Module metadata is required and cannot be null..
         /// </summary>
         internal static string ArgumentNullException_ModuleMetadata {
             get {
@@ -142,7 +142,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Display detailed error and stacktrace information..
+        ///   Looks up a localized string similar to Display detailed error and stack trace information..
         /// </summary>
         internal static string CommandLine_Debug_Description {
             get {
@@ -442,7 +442,7 @@ namespace Ntara.PackageBuilder {
         ///
         ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -version:assembly=&quot;Company.Module.dll&quot;,assemblyAttribute=&quot;AssemblyInformationalVersion&quot;
         ///
-        ///{0} -module:Company.Module -metadata:id=Company.CustomId,title=&quot;Custom Title&quot;,description=&quot;Custom description here...&quot;,authors=&quot;Contributor1, Contributor2&quot;.
+        ///{0} -module:Company.Module -metadata:id=Company.CustomId,title=&quot;Custom Title&quot;,description=&quot;Custom [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ToolExamples {
             get {
