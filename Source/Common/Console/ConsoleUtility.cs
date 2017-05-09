@@ -174,7 +174,7 @@ namespace Ntara.PackageBuilder
 
 		private static void WriteColumns(string column1, string column2, int column2StartIndex, int indent)
 		{
-			var messagePart = $"{new string(' ', indent)}{column1}{column2}";
+			var messagePart = new string(' ', indent) + column1 + column2;
 			var messageOverflow = (string)null;
 
 			do

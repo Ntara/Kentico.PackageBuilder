@@ -97,7 +97,7 @@ namespace Ntara.PackageBuilder
 		/// <inheritdoc />
 		public string PackageFileName
 		{
-			get { return $"{ManifestMetadata.Id}_{ManifestMetadata.Version}.nupkg"; }
+			get { return string.Format(CultureInfo.InvariantCulture, "{0}_{1}.nupkg", ManifestMetadata.Id, ManifestMetadata.Version); }
 		}
 
 		/// <inheritdoc />
@@ -162,7 +162,7 @@ namespace Ntara.PackageBuilder
 
 			if (!string.IsNullOrEmpty(targetFramework))
 			{
-				if (!targetFramework.StartsWith(@"\"))
+				if (!targetFramework.StartsWith(@"\", StringComparison.Ordinal))
 				{
 					stringBuilder.Append(@"\");
 				}
@@ -172,7 +172,7 @@ namespace Ntara.PackageBuilder
 
 			if (!string.IsNullOrEmpty(destination))
 			{
-				if (!destination.StartsWith(@"\"))
+				if (!destination.StartsWith(@"\", StringComparison.Ordinal))
 				{
 					stringBuilder.Append(@"\");
 				}

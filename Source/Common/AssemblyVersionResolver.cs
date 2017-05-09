@@ -98,7 +98,7 @@ namespace Ntara.PackageBuilder
 				return assembly;
 			}
 
-			return $"{assembly}.dll";
+			return string.Format(CultureInfo.InvariantCulture, "{0}.dll", assembly);
 		}
 
 		private string GetAssemblyFilePath(string assembly)
@@ -115,7 +115,7 @@ namespace Ntara.PackageBuilder
 					!assemblyFileName.Contains("\\") &&
 					!assemblyFileName.Contains("/"))
 				{
-					assemblyFilePath = Path.Combine(_rootPath, $@"bin\{assemblyFileName}");
+					assemblyFilePath = Path.Combine(Path.Combine(_rootPath, "bin"), assemblyFileName);
 				}
 			}
 

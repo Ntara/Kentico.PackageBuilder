@@ -7,6 +7,7 @@
 // -----------------------------------------------------------
 
 using System;
+using System.Globalization;
 using System.Runtime.Serialization;
 using System.Security;
 
@@ -33,7 +34,7 @@ namespace Ntara.PackageBuilder
 			{
 				if (!string.IsNullOrEmpty(ArgumentName))
 				{
-					string argumentMessage = $"Argument name: {ArgumentName}";
+					var argumentMessage = string.Format(CultureInfo.CurrentCulture, "Argument name: {0}", ArgumentName);
 					return base.Message + Environment.NewLine + argumentMessage;
 				}
 

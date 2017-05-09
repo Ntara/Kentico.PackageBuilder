@@ -133,9 +133,11 @@ namespace Ntara.PackageBuilder
 				ConsoleWriter.WriteMessage(CommonResources.Progress_BuildSuccess);
 
 				// Write result summary
-				var resultRows = new List<ConsoleTableRow>();
-				resultRows.Add(new ConsoleTableRow(CommonResources.Report_OutputDirectory, result.OutputDirectory));
-				resultRows.Add(new ConsoleTableRow(CommonResources.Report_PackageName, result.PackageFileName));
+				var resultRows = new List<ConsoleTableRow>()
+				{
+					new ConsoleTableRow(CommonResources.Report_OutputDirectory, result.OutputDirectory),
+					new ConsoleTableRow(CommonResources.Report_PackageName, result.PackageFileName)
+				};
 
 				ConsoleWriter.NewLine();
 				ConsoleUtility.WriteTable(resultRows);
@@ -158,9 +160,9 @@ namespace Ntara.PackageBuilder
 
 				if (debug)
 				{
-					// Write exception type
-					var exceptionSectionTitle = string.Format(CultureInfo.CurrentCulture, CommonResources.SectionFormat, Environment.NewLine + exception.GetType().FullName);
-					ConsoleWriter.WriteErrorDetail(exceptionSectionTitle);
+					// Write error section title
+					var errorSectionTitle = string.Format(CultureInfo.CurrentCulture, CommonResources.SectionFormat, Environment.NewLine + exception.GetType().FullName);
+					ConsoleWriter.WriteErrorDetail(errorSectionTitle);
 
 					// Write exception stack trace
 					ConsoleUtility.WriteWrappedMessage(exception.StackTrace, ConsoleWriter.WriteErrorDetail, 0, 6);

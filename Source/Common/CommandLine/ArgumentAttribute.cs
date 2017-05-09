@@ -7,6 +7,7 @@
 // -----------------------------------------------------------
 
 using System;
+using System.Globalization;
 
 namespace Ntara.PackageBuilder
 {
@@ -37,7 +38,7 @@ namespace Ntara.PackageBuilder
 			{
 				if (!string.IsNullOrWhiteSpace(ValueName))
 				{
-					return $"{Name}:<{ValueName}>";
+					return string.Format(CultureInfo.CurrentCulture, "{0}:<{1}>", Name, ValueName);
 				}
 
 				return Name;

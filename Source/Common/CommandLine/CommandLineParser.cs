@@ -176,7 +176,7 @@ namespace Ntara.PackageBuilder
 		private static bool IsSurroundedBy(string value, char character)
 		{
 			var characterString = character.ToString();
-			return value.StartsWith(characterString) && value.EndsWith(characterString);
+			return value.StartsWith(characterString, StringComparison.Ordinal) && value.EndsWith(characterString, StringComparison.Ordinal);
 		}
 
 		private static string NormalizeDashes(string input)
