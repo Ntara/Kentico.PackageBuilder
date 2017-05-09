@@ -91,8 +91,8 @@ namespace Ntara.PackageBuilder
 
 		private string GetAssemblyFileName(string assembly)
 		{
-			if (assembly.EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase) ||
-				assembly.EndsWith(".exe", StringComparison.InvariantCultureIgnoreCase))
+			if (assembly.EndsWith(".dll", StringComparison.OrdinalIgnoreCase) ||
+				assembly.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
 			{
 				return assembly;
 			}

@@ -90,17 +90,17 @@ namespace Ntara.PackageBuilder
 			var parser = new CommandLineParser();
 			parser.ParseArgument(argument, out argumentName, out argumentValue);
 
-			if (string.Equals(argumentName, CommandLineArguments.Help, StringComparison.InvariantCultureIgnoreCase) ||
-				string.Equals(argumentName, "-?", StringComparison.InvariantCulture) ||
-				string.Equals(argumentName, "/?", StringComparison.InvariantCulture))
+			if (string.Equals(argumentName, CommandLineArguments.Help, StringComparison.OrdinalIgnoreCase) ||
+				string.Equals(argumentName, "-?", StringComparison.Ordinal) ||
+				string.Equals(argumentName, "/?", StringComparison.Ordinal))
 			{
 				Help = true;
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.Debug, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.Debug, StringComparison.OrdinalIgnoreCase))
 			{
 				Debug = true;
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.Module, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.Module, StringComparison.OrdinalIgnoreCase))
 			{
 				if (!string.IsNullOrEmpty(Module))
 				{
@@ -109,7 +109,7 @@ namespace Ntara.PackageBuilder
 
 				Module = parser.TrimQuotes(argumentValue);
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.NuSpecFile, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.NuSpecFile, StringComparison.OrdinalIgnoreCase))
 			{
 				if (!string.IsNullOrEmpty(NuSpecFile))
 				{
@@ -118,7 +118,7 @@ namespace Ntara.PackageBuilder
 
 				NuSpecFile = parser.TrimQuotes(argumentValue);
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.OutputDirectory, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.OutputDirectory, StringComparison.OrdinalIgnoreCase))
 			{
 				if (!string.IsNullOrEmpty(OutputDirectory))
 				{
@@ -127,7 +127,7 @@ namespace Ntara.PackageBuilder
 
 				OutputDirectory = parser.TrimQuotes(argumentValue);
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.Metadata, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.Metadata, StringComparison.OrdinalIgnoreCase))
 			{
 				if (Metadata != null)
 				{
@@ -136,7 +136,7 @@ namespace Ntara.PackageBuilder
 
 				Metadata = ParseMetadataArgument(argumentValue);
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.Properties, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.Properties, StringComparison.OrdinalIgnoreCase))
 			{
 				if (Properties != null)
 				{
@@ -145,7 +145,7 @@ namespace Ntara.PackageBuilder
 
 				Properties = ParsePropertiesArgument(argumentValue);
 			}
-			else if (string.Equals(argumentName, CommandLineArguments.Version, StringComparison.InvariantCultureIgnoreCase))
+			else if (string.Equals(argumentName, CommandLineArguments.Version, StringComparison.OrdinalIgnoreCase))
 			{
 				if (Version != null)
 				{
@@ -169,19 +169,19 @@ namespace Ntara.PackageBuilder
 
 			foreach (var property in properties)
 			{
-				if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataId, StringComparison.InvariantCultureIgnoreCase))
+				if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataId, StringComparison.OrdinalIgnoreCase))
 				{
 					metadata.Id = property.Value;
 				}
-				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataTitle, StringComparison.InvariantCultureIgnoreCase))
+				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataTitle, StringComparison.OrdinalIgnoreCase))
 				{
 					metadata.Title = property.Value;
 				}
-				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataDescription, StringComparison.InvariantCultureIgnoreCase))
+				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataDescription, StringComparison.OrdinalIgnoreCase))
 				{
 					metadata.Description = property.Value;
 				}
-				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataAuthors, StringComparison.InvariantCultureIgnoreCase))
+				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.MetadataAuthors, StringComparison.OrdinalIgnoreCase))
 				{
 					metadata.Authors = property.Value;
 				}
@@ -221,11 +221,11 @@ namespace Ntara.PackageBuilder
 
 			foreach (var property in properties)
 			{
-				if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssembly, StringComparison.InvariantCultureIgnoreCase))
+				if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssembly, StringComparison.OrdinalIgnoreCase))
 				{
 					version.Assembly = property.Value;
 				}
-				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssemblyAttribute, StringComparison.InvariantCultureIgnoreCase))
+				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssemblyAttribute, StringComparison.OrdinalIgnoreCase))
 				{
 					AssemblyVersionType versionType;
 
