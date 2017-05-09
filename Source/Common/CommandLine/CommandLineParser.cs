@@ -107,7 +107,8 @@ namespace Ntara.PackageBuilder
 				// Notify on duplicate properties
 				if (parameters.ContainsKey(propertyName))
 				{
-					OnDuplicateArgumentProperty(argumentName, propertyName);
+					var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
+					throw new CommandLineArgumentPropertyException(argumentName, propertyName, errorMessage);
 				}
 
 				parameters.Add(propertyName, propertyValue);
@@ -137,12 +138,6 @@ namespace Ntara.PackageBuilder
 		#endregion
 
 		#region |-- Support Methods --|
-
-		private void OnDuplicateArgumentProperty(string argumentName, string propertyName)
-		{
-			var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.CommandLineArgumentPropertyException_AlreadyDefined, propertyName);
-			throw new CommandLineArgumentPropertyException(argumentName, propertyName, errorMessage);
-		}
 
 		private static int SmartIndexOf(string input, char character)
 		{

@@ -15,7 +15,7 @@ namespace Ntara.PackageBuilder
 	/// The exception thrown when the specified module could not be resolved.
 	/// </summary>
 	[Serializable]
-	public sealed class ModuleNotFoundException : ApplicationException
+	public sealed class ModuleNotFoundException : Exception
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ModuleNotFoundException"/> class.

@@ -92,12 +92,12 @@ namespace Ntara.PackageBuilder
 			return new DefaultConsoleWriter();
 		}
 
-		private void WriteLine(TextWriter outputStream, string message)
+		private static void WriteLine(TextWriter outputStream, string message)
 		{
 			outputStream.WriteLine(message);
 		}
 
-		private void WriteMessage(TextWriter outputStream, ConsoleColor color, string message)
+		private static void WriteMessage(TextWriter outputStream, ConsoleColor color, string message)
 		{
 			var foregroundColor = Console.ForegroundColor;
 

@@ -61,15 +61,6 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The module version could not be resolved from assembly &apos;{0}&apos; for type &apos;{1}&apos;..
-        /// </summary>
-        internal static string ApplicationException_AssemblyVersionNotResolved {
-            get {
-                return ResourceManager.GetString("ApplicationException_AssemblyVersionNotResolved", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The reference assembly cannot be null or empty..
         /// </summary>
         internal static string ArgumentException_AssemblyNullOrEmpty {
@@ -504,6 +495,15 @@ namespace Ntara.PackageBuilder {
         internal static string UnauthorizedAccessException_InsufficientWritePermissions {
             get {
                 return ResourceManager.GetString("UnauthorizedAccessException_InsufficientWritePermissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The module version could not be resolved from assembly &apos;{0}&apos; for type &apos;{1}&apos;..
+        /// </summary>
+        internal static string VersionNotFoundException_AssemblyVersionNotResolved {
+            get {
+                return ResourceManager.GetString("VersionNotFoundException_AssemblyVersionNotResolved", resourceCulture);
             }
         }
     }

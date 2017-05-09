@@ -14,7 +14,7 @@ using System.Security;
 namespace Ntara.PackageBuilder
 {
 	[Serializable]
-	internal class CommandLineArgumentException : ApplicationException
+	internal class CommandLineArgumentException : Exception
 	{
 		public CommandLineArgumentException(string argumentName, string message) : base(message)
 		{

@@ -32,5 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModulePropertyProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StaticVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VersionNotFoundException.cs" />
   </ItemGroup>
 </Project>

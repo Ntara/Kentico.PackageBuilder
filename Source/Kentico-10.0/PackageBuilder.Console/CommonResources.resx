@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApplicationException_AssemblyVersionNotResolved" xml:space="preserve">
-    <value>The module version could not be resolved from assembly '{0}' for type '{1}'.</value>
-  </data>
   <data name="ArgumentException_AssemblyNullOrEmpty" xml:space="preserve">
     <value>The reference assembly cannot be null or empty.</value>
   </data>
@@ -275,5 +272,8 @@ More detailed information on Kentico module development may be found here:
   </data>
   <data name="UnauthorizedAccessException_InsufficientWritePermissions" xml:space="preserve">
     <value>Insufficient write permissions necessary for target path '{0}'.</value>
+  </data>
+  <data name="VersionNotFoundException_AssemblyVersionNotResolved" xml:space="preserve">
+    <value>The module version could not be resolved from assembly '{0}' for type '{1}'.</value>
   </data>
 </root>

@@ -48,7 +48,7 @@ namespace Ntara.PackageBuilder
 		/// <returns>The version of the specified assembly.</returns>
 		/// <exception cref="FileNotFoundException">The assembly file could not be found.</exception>
 		/// <exception cref="NotSupportedException">The assembly version type is unknown or unsupported.</exception>
-		/// <exception cref="ApplicationException">The requested version attribute was not defined for the assembly.</exception>
+		/// <exception cref="VersionNotFoundException">The requested version attribute was not defined for the assembly.</exception>
 		public string GetVersion()
 		{
 			var assemblyFilePath = GetAssemblyFilePath(_assemblyFile);
@@ -81,8 +81,8 @@ namespace Ntara.PackageBuilder
 
 			if (string.IsNullOrEmpty(moduleVersion))
 			{
-				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.ApplicationException_AssemblyVersionNotResolved, _assemblyFile, _assemblyVersionType);
-				throw new ApplicationException(errorMessage);
+				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.VersionNotFoundException_AssemblyVersionNotResolved, _assemblyFile, _assemblyVersionType);
+				throw new VersionNotFoundException(errorMessage);
 			}
 
 			return moduleVersion;
