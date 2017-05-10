@@ -60,7 +60,8 @@ namespace Ntara.PackageBuilder
 				throw new FileNotFoundException(errorMessage);
 			}
 
-			var moduleAssembly = Assembly.LoadFile(assemblyFilePath);
+			var moduleAssembly = Assembly.UnsafeLoadFrom(assemblyFilePath);
+
 			string moduleVersion;
 
 			switch (_assemblyVersionType)
