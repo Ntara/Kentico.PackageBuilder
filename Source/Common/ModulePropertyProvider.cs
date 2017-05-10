@@ -35,12 +35,14 @@ namespace Ntara.PackageBuilder
 				throw new ArgumentNullException(nameof(moduleMetadata), CommonResources.ArgumentNullException_ModuleMetadata);
 			}
 
-			_properties = new Dictionary<string, string>();
-			_properties["id"] = moduleMetadata.Id;
-			_properties["version"] = moduleMetadata.Version;
-			_properties["title"] = moduleMetadata.Title;
-			_properties["description"] = moduleMetadata.Description;
-			_properties["authors"] = moduleMetadata.Authors;
+			_properties = new Dictionary<string, string>
+			{
+				["id"] = moduleMetadata.Id,
+				["version"] = moduleMetadata.Version,
+				["title"] = moduleMetadata.Title,
+				["description"] = moduleMetadata.Description,
+				["authors"] = moduleMetadata.Authors
+			};
 
 			// Append optional property values
 			if (properties != null)

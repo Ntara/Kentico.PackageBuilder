@@ -198,9 +198,11 @@ namespace Ntara.PackageBuilder
 						// Confirm that the default Readme.txt file still exists or an error will occur
 						if (File.Exists(readmeFilePath))
 						{
-							var readmeFile = new PhysicalPackageFile();
-							readmeFile.SourcePath = readmeFilePath;
-							readmeFile.TargetPath = ReadmeFileName;
+							var readmeFile = new PhysicalPackageFile()
+							{
+								SourcePath = readmeFilePath,
+								TargetPath = ReadmeFileName
+							};
 
 							// Add the physical file
 							packageBuilder.Files.Add(readmeFile);
