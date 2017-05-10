@@ -68,6 +68,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>PublicKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Ntara.PackageBuilder.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CMS.Base, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
