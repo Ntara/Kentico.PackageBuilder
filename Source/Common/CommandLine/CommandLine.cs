@@ -92,6 +92,7 @@ namespace Ntara.PackageBuilder
 			parser.ParseArgument(argument, out argumentName, out argumentValue);
 
 			if (string.Equals(argumentName, CommandLineArguments.Help, StringComparison.OrdinalIgnoreCase) ||
+			    string.Equals(argumentName, "?", StringComparison.Ordinal) ||
 				string.Equals(argumentName, "-?", StringComparison.Ordinal) ||
 				string.Equals(argumentName, "/?", StringComparison.Ordinal))
 			{

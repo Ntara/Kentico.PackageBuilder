@@ -33,6 +33,15 @@ namespace Ntara.PackageBuilder.Test
 		[TestMethod]
 		public void TestHelp2()
 		{
+			const string commandLine = @"?";
+			var expected = new CommandLine() { Help = true };
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestHelp3()
+		{
 			const string commandLine = @"-?";
 			var expected = new CommandLine() { Help = true };
 
@@ -50,6 +59,15 @@ namespace Ntara.PackageBuilder.Test
 
 		[TestMethod]
 		public void TestHelpDuplicate2()
+		{
+			const string commandLine = "-help ?";
+			var expected = new CommandLine() { Help = true };
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestHelpDuplicate3()
 		{
 			const string commandLine = "-help -?";
 			var expected = new CommandLine() { Help = true };

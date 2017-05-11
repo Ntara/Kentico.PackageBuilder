@@ -133,7 +133,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Display detailed error and stack trace information..
+        ///   Looks up a localized string similar to Displays detailed errors and stack trace information..
         /// </summary>
         internal static string CommandLine_Debug_Description {
             get {
@@ -214,7 +214,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Package output directory. The default path is &apos;CMSSiteUtils/Export&apos;..
+        ///   Looks up a localized string similar to Specifies the package output directory. The default path is &apos;CMSSiteUtils/Export&apos;..
         /// </summary>
         internal static string CommandLine_OutputDirectory_Description {
             get {

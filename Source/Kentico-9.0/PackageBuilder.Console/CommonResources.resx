@@ -142,7 +142,7 @@
     <value>A valid version resolver is required and cannot be null.</value>
   </data>
   <data name="CommandLine_Debug_Description" xml:space="preserve">
-    <value>Display detailed error and stack trace information.</value>
+    <value>Displays detailed errors and stack trace information.</value>
   </data>
   <data name="CommandLine_Metadata_Description" xml:space="preserve">
     <value>Overrides generated NuSpec metadata properties.</value>
@@ -169,7 +169,7 @@
     <value>NuSpec file path (absolute or relative to the CMS root).</value>
   </data>
   <data name="CommandLine_OutputDirectory_Description" xml:space="preserve">
-    <value>Package output directory. The default path is 'CMSSiteUtils/Export'.</value>
+    <value>Specifies the package output directory. The default path is 'CMSSiteUtils/Export'.</value>
   </data>
   <data name="CommandLine_Properties_Description" xml:space="preserve">
     <value>Defines a set of property tokens where each occurrence of $token$ in the specified NuSpec file will be replaced with the given value.</value>
