@@ -205,7 +205,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NuSpec file path (absolute or relative to the CMS root)..
+        ///   Looks up a localized string similar to NuSpec file path (absolute or relative to the website root)..
         /// </summary>
         internal static string CommandLine_NuSpecFile_Description {
             get {

@@ -166,7 +166,7 @@
     <value>Module code name (required).</value>
   </data>
   <data name="CommandLine_NuSpecFile_Description" xml:space="preserve">
-    <value>NuSpec file path (absolute or relative to the CMS root).</value>
+    <value>NuSpec file path (absolute or relative to the website root).</value>
   </data>
   <data name="CommandLine_OutputDirectory_Description" xml:space="preserve">
     <value>Specifies the package output directory. The default path is 'CMSSiteUtils/Export'.</value>
