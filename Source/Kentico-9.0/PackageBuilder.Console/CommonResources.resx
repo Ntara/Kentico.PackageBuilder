@@ -252,7 +252,7 @@ Copyright (c) Ntara, Inc. All rights reserved.</value>
 
 {0} -module:Company.Module -nuspec:"Company.Module.nuspec" -version:1.2.0-RC1
 
-{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -properties:company="Acme, Inc."
+{0} -module:Company.Module -nuspec:"Company.Module.nuspec" -properties:company="Company, Inc."
 
 {0} -module:Company.Module -nuspec:"Company.Module.nuspec" -version:assembly="Company.Module.dll",assemblyAttribute="AssemblyInformationalVersion"
 

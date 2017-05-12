@@ -438,11 +438,11 @@ namespace Ntara.PackageBuilder {
         ///
         ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -version:1.2.0-RC1
         ///
-        ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -properties:company=&quot;Acme, Inc.&quot;
+        ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -properties:company=&quot;Company, Inc.&quot;
         ///
         ///{0} -module:Company.Module -nuspec:&quot;Company.Module.nuspec&quot; -version:assembly=&quot;Company.Module.dll&quot;,assemblyAttribute=&quot;AssemblyInformationalVersion&quot;
         ///
-        ///{0} -module:Company.Module -metadata:id=Company.CustomId,title=&quot;Custom Title&quot;,description=&quot;Custom [rest of string was truncated]&quot;;.
+        ///{0} -module:Company.Module -metadata:id=Company.CustomId,title=&quot;Custom Title&quot;,description=&quot;Cus [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ToolExamples_Content {
             get {
