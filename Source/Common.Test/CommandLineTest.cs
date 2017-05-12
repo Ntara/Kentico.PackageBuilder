@@ -147,6 +147,38 @@ namespace Ntara.PackageBuilder.Test
 		}
 
 		[TestMethod]
+		public void TestNuSpecAssemblyWildcard1()
+		{
+			const string commandLine =
+				@"-module:Custom.ModuleResource " +
+				@"-nuspec";
+
+			var expected = new CommandLine()
+			{
+				Module = "Custom.ModuleResource",
+				NuSpecFile = CommandLine.Wildcard
+			};
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestNuSpecAssemblyWildcard2()
+		{
+			const string commandLine =
+				@"-module:Custom.ModuleResource " +
+				@"-nuspec=*";
+
+			var expected = new CommandLine()
+			{
+				Module = "Custom.ModuleResource",
+				NuSpecFile = CommandLine.Wildcard
+			};
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
 		public void TestNuSpecFileSingleQuotes()
 		{
 			const string commandLine =
@@ -459,7 +491,7 @@ namespace Ntara.PackageBuilder.Test
 				Module = "Custom.ModuleResource",
 				Version = new CommandLineVersion()
 				{
-					Assembly = string.Empty,
+					Assembly = CommandLine.Wildcard,
 					AssemblyVersionType = AssemblyVersionType.AssemblyFileVersion
 				}
 			};
@@ -479,8 +511,48 @@ namespace Ntara.PackageBuilder.Test
 				Module = "Custom.ModuleResource",
 				Version = new CommandLineVersion()
 				{
-					Assembly = "*",
+					Assembly = CommandLine.Wildcard,
 					AssemblyVersionType = AssemblyVersionType.AssemblyFileVersion
+				}
+			};
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestVersionAssemblySingleQuotes()
+		{
+			const string commandLine =
+				@"-module:Custom.ModuleResource " +
+				@"-version:assembly='Custom.ModuleResource.dll',assemblyAttribute=AssemblyInformationalVersion";
+
+			var expected = new CommandLine()
+			{
+				Module = "Custom.ModuleResource",
+				Version = new CommandLineVersion()
+				{
+					Assembly = "Custom.ModuleResource.dll",
+					AssemblyVersionType = AssemblyVersionType.AssemblyInformationalVersion
+				}
+			};
+
+			AssertCommandLine(commandLine, expected);
+		}
+
+		[TestMethod]
+		public void TestVersionAssemblyDoubleQuotes()
+		{
+			const string commandLine =
+				@"-module:Custom.ModuleResource " +
+				@"-version:assembly=""Custom.ModuleResource.dll"",assemblyAttribute=AssemblyInformationalVersion";
+
+			var expected = new CommandLine()
+			{
+				Module = "Custom.ModuleResource",
+				Version = new CommandLineVersion()
+				{
+					Assembly = "Custom.ModuleResource.dll",
+					AssemblyVersionType = AssemblyVersionType.AssemblyInformationalVersion
 				}
 			};
 

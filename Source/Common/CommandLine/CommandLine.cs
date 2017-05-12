@@ -14,6 +14,8 @@ namespace Ntara.PackageBuilder
 {
 	internal class CommandLine
 	{
+		public const string Wildcard = "*";
+
 		public static CommandLine Current
 		{
 			get
@@ -118,7 +120,9 @@ namespace Ntara.PackageBuilder
 					ThrowArgumentAlreadyDefined(CommandLineArguments.NuSpecFile);
 				}
 
-				NuSpecFile = parser.TrimQuotes(argumentValue);
+				var filePath = parser.TrimQuotes(argumentValue);
+
+				NuSpecFile = !string.IsNullOrEmpty(filePath) ? filePath : Wildcard;
 			}
 			else if (string.Equals(argumentName, CommandLineArguments.OutputDirectory, StringComparison.OrdinalIgnoreCase))
 			{
@@ -225,7 +229,7 @@ namespace Ntara.PackageBuilder
 			{
 				if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssembly, StringComparison.OrdinalIgnoreCase))
 				{
-					version.Assembly = property.Value;
+					version.Assembly = !string.IsNullOrEmpty(property.Value) ? property.Value : Wildcard;
 				}
 				else if (string.Equals(property.Key, CommandLineArguments.ObjectProperties.VersionAssemblyAttribute, StringComparison.OrdinalIgnoreCase))
 				{

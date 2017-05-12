@@ -85,7 +85,7 @@ namespace Ntara.PackageBuilder
 					var assemblyVersionType = commandLine.Version.AssemblyVersionType;
 
 					// Resolve wildcards to assemblies matching the resource name
-					if (string.IsNullOrEmpty(assembly) || assembly == "*")
+					if (assembly == CommandLine.Wildcard)
 					{
 						assembly = module.ResourceName;
 					}
@@ -105,8 +105,18 @@ namespace Ntara.PackageBuilder
 				}
 
 				// Set NuSpec file (if specified)
-				packageBuilder.NuSpecFile = commandLine.NuSpecFile;
-				packageBuilder.NuSpecProperties = commandLine.Properties;
+				if (!string.IsNullOrEmpty(commandLine.NuSpecFile))
+				{
+					var filePath = commandLine.NuSpecFile;
+
+					if (filePath == CommandLine.Wildcard)
+					{
+						filePath = string.Format(CultureInfo.InvariantCulture, "{0}.nuspec", module.ResourceName);
+					}
+
+					packageBuilder.NuSpecFile = filePath;
+					packageBuilder.NuSpecProperties = commandLine.Properties;
+				}
 
 				// Override module metadata (if specified)
 				if (commandLine.Metadata != null)
