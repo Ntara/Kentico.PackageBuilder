@@ -57,7 +57,7 @@ namespace Ntara.PackageBuilder
 			if (!File.Exists(assemblyFilePath))
 			{
 				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.FileNotFoundException_AssemblyNotFound, assemblyFilePath);
-				throw new FileNotFoundException(errorMessage);
+				throw new FileNotFoundException(errorMessage, assemblyFilePath);
 			}
 
 			var moduleAssembly = Assembly.UnsafeLoadFrom(assemblyFilePath);

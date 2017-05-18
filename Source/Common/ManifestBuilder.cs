@@ -75,7 +75,7 @@ namespace Ntara.PackageBuilder
 			if (!File.Exists(nuspecFilePath))
 			{
 				var errorMessage = string.Format(CultureInfo.CurrentCulture, CommonResources.FileNotFoundException_NuSpecNotFound, nuspecFilePath);
-				throw new FileNotFoundException(errorMessage);
+				throw new FileNotFoundException(errorMessage, nuspecFilePath);
 			}
 
 			using (var fileStream = new FileStream(nuspecFilePath, FileMode.Open))
