@@ -52,3 +52,7 @@ It is critical that developers observe Kentico best practices when packaging mod
 
 > **Important:**
 The `PackageBuilder.exe` application must execute from the `bin` directory of a valid Kentico CMS installation. This allows the native module export to include all database objects, libraries, and file dependencies related to the specified module instance.
+
+# Licensing
+
+Source code is made available under terms of the [MIT license](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Licensing).
