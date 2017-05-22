@@ -1,3 +1,17 @@
+# Overview
+
+The `Package Builder` export tool allows more finite control over the creation of Kentico module installation packages with command-line support for continuous integration environments.
+
+Comprehensive documentation of advanced topics and examples are available through the [Package Builder Wiki](https://github.com/Ntara/Kentico.PackageBuilder/wiki).
+
+- [Command-line Interface](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Command-Arguments)
+- [NuSpec Manifests](https://github.com/Ntara/Kentico.PackageBuilder/wiki/NuSpec-Manifests)
+- [Property Tokens](https://github.com/Ntara/Kentico.PackageBuilder/wiki/NuSpec-Manifests#replacement-tokens)
+- [Adding Additional Files](https://github.com/Ntara/Kentico.PackageBuilder/wiki/NuSpec-Manifests#including-additional-files)
+- [Metadata Overrides](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Command-Arguments#-metadata)
+- [Alternate Output Directory](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Command-Arguments#-output)
+- [Versioning by Assembly Attribute](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Package-Versioning#extracting-version-information-from-an-assembly-file)
+
 # Installation
 
 Distributions of `Package Builder` are available for download from the [NuGet Gallery](https://www.nuget.org/) or installed by any supported NuGet client tool. The package must be installed to an existing Kentico `website` or `web application` project.
