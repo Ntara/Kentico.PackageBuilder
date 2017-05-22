@@ -53,6 +53,14 @@ It is critical that developers observe Kentico best practices when packaging mod
 > **Important:**
 The `PackageBuilder.exe` application must execute from the `bin` directory of a valid Kentico CMS installation. This allows the native module export to include all database objects, libraries, and file dependencies related to the specified module instance.
 
+The [-module](Command-Arguments#-module) command is the only **required** command-line argument. The following command will produce a *NuGet* (.nupkg) package identical to one produced by clicking the **Create installation package** button.
+
+```
+PackageBuilder.exe -module:Acme.Module
+```
+
+In this example, the package `Acme.Module_1.0.0.nupkg` will be written to the website `CMSSiteUtils\Export` directory.
+
 # Licensing
 
 Source code is made available under terms of the [MIT license](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Licensing).
