@@ -85,7 +85,7 @@ namespace Ntara.PackageBuilder
 
 				ManifestMetadata = manifest.Metadata;
 
-				_files = manifest.Files;
+				_files = manifest.Files ?? new List<ManifestFile>();
 			}
 		}
 
