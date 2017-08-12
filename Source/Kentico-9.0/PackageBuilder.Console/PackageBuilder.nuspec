@@ -20,5 +20,6 @@
 		<file src="$OutputBasePath$\**\$id$.pdb" target="lib" />
 		<file src="$OutputBasePath$\**\$id$.xml" target="lib" />
 		<file src="License.txt" target="License.txt" />
+		<file src="Readme.txt" target="Readme.txt" />
 	</files>
 </package>
