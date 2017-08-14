@@ -10,8 +10,7 @@
 		<projectUrl>https://github.com/Ntara/Kentico.PackageBuilder</projectUrl>
 		<licenseUrl>https://ntara.github.io/license</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Command-line utility for creating Kentico module packages</description>
-		<summary></summary>
+		<description>Package Builder is a command-line utility allowing more finite control over the creation of Kentico module packages and support for continuous integration.</description>
 		<tags>Kentico CMS Module Package CommandLine</tags>
 		<dependencies />
 	</metadata>
