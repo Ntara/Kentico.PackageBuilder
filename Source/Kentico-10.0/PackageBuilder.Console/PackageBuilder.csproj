@@ -148,7 +148,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PackageBuilder.nuspec" />
+    <None Include="PackageBuilder.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="PublicKey.snk" />
   </ItemGroup>
   <ItemGroup>

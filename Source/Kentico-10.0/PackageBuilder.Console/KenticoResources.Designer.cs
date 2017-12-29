@@ -61,7 +61,7 @@ namespace Ntara.PackageBuilder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://docs.kentico.com/k9/custom-development/creating-custom-modules.
+        ///   Looks up a localized string similar to https://docs.kentico.com/k10/custom-development/creating-custom-modules.
         /// </summary>
         internal static string KenticoHelpUrl {
             get {
