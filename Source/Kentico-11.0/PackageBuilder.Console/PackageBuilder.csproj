@@ -2,28 +2,15 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug 4.6</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug 4.7</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5036D203-4833-4C89-A736-11CA4E45B281}</ProjectGuid>
+    <ProjectGuid>{A1DFA373-5D22-4157-AF0B-4FCA636B33CE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ntara.PackageBuilder</RootNamespace>
     <AssemblyName>PackageBuilder</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.5|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\net45\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NET_45;KENTICO_9</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\net45\PackageBuilder.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.6|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,36 +18,49 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\net46\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NET_46;KENTICO_9</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NET_46;KENTICO_11</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\net46\PackageBuilder.xml</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 4.5|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.7|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\net45\</OutputPath>
-    <DefineConstants>TRACE;NET_45;KENTICO_9</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net47\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET_47;KENTICO_11</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\net45\PackageBuilder.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net47\PackageBuilder.xml</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 4.6|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\net46\</OutputPath>
-    <DefineConstants>TRACE;NET_46;KENTICO_9</DefineConstants>
+    <DefineConstants>TRACE;NET_46;KENTICO_11</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\net46\PackageBuilder.xml</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 4.7|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net47\</OutputPath>
+    <DefineConstants>TRACE;NET_47;KENTICO_11</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\net47\PackageBuilder.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -72,44 +72,46 @@
     <StartupObject>Ntara.PackageBuilder.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CMS.Base, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.Base, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.Base.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.Base.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.Base.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.Base.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.Core, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.Core, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.Core.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.Core.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.Core.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.DataEngine, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.DataEngine, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.DataEngine.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.DataEngine.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.DataEngine.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.DataEngine.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.Helpers, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.Helpers, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.Helpers.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.Helpers.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.Helpers.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.ImportExport, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.ImportExport, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.ImportExport.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.ImportExport.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.ImportExport.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.ImportExport.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.IO, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.IO, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.IO.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.IO.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.IO.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.IO.dll</HintPath>
     </Reference>
-    <Reference Include="CMS.Modules, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+    <Reference Include="CMS.Modules, Version=11.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.5'">..\..\..\Dependencies\Kentico-9.0\Net45\CMS.Modules.dll</HintPath>
-      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-9.0\Net46\CMS.Modules.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.6'">..\..\..\Dependencies\Kentico-11.0\Net46\CMS.Modules.dll</HintPath>
+      <HintPath Condition="'$(TargetFrameworkVersion)' == 'v4.7'">..\..\..\Dependencies\Kentico-11.0\Net47\CMS.Modules.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Core, Version=2.8.50506.491, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Dependencies\Kentico-9.0\Common\NuGet.Core.dll</HintPath>
+    <Reference Include="Microsoft.Web.XmlTransform, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.14.0.832, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -151,6 +153,7 @@
     <None Include="PackageBuilder.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Packages.config" />
     <None Include="PublicKey.snk" />
   </ItemGroup>
   <ItemGroup>

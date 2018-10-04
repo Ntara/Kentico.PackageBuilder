@@ -1,6 +1,12 @@
 [submodule "Dependencies/Kentico-9.0"]
 	path = Dependencies/Kentico-9.0
 	url = https://github.com/Ntara/Kentico.Dependencies.git
+	branch = kentico-9.0
 [submodule "Dependencies/Kentico-10.0"]
 	path = Dependencies/Kentico-10.0
 	url = https://github.com/Ntara/Kentico.Dependencies.git
+	branch = kentico-10.0
+[submodule "Dependencies/Kentico-11.0"]
+	path = Dependencies/Kentico-11.0
+	url = https://github.com/Ntara/Kentico.Dependencies.git
+	branch = kentico-11.0

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ntara.PackageBuilder</RootNamespace>
     <AssemblyName>PackageBuilder</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.5|AnyCPU' ">
@@ -148,7 +148,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PackageBuilder.nuspec" />
+    <None Include="PackageBuilder.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="PublicKey.snk" />
   </ItemGroup>
   <ItemGroup>
