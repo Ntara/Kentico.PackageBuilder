@@ -2,8 +2,8 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Ntara, Inc. All rights reserved.  
-Copyright (c) 2017 Kentico software s.r.o.  
+Copyright (c) 2018 Ntara, Inc. All rights reserved.  
+Copyright (c) 2018 Kentico software s.r.o.  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
