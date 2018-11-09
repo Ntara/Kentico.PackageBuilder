@@ -32,6 +32,14 @@ To install `Package Builder` for Kentico 10, run the following command in the [P
 PM> Install-Package Ntara.Kentico-10.0.PackageBuilder
 ```
 
+### Installing on Kentico 11.0
+
+To install `Package Builder` for Kentico 11, run the following command in the [Package Manager Console](https://docs.microsoft.com/en-us/nuget/tools/package-manager-console)
+
+```
+PM> Install-Package Ntara.Kentico-11.0.PackageBuilder
+```
+
 # Creating Kentico Modules
 
 ![Kentico Module Administration](https://github.com/Ntara/Kentico.PackageBuilder/wiki/Images/KenticoModuleAdmin_General.png)
@@ -47,6 +55,11 @@ It is critical that developers observe Kentico best practices when packaging mod
 
 - [Creating Custom Modules](https://docs.kentico.com/k10/custom-development/creating-custom-modules)
 - [Creating a Packageable Module](https://docs.kentico.com/k10/custom-development/creating-custom-modules/creating-installation-packages-for-modules/example-creating-a-packageable-module) (Recommended)
+
+### Kentico 11 Resources
+
+- [Creating Custom Modules](https://docs.kentico.com/k11/custom-development/creating-custom-modules)
+- [Creating a Packageable Module](https://docs.kentico.com/k11/custom-development/creating-custom-modules/creating-installation-packages-for-modules/example-creating-a-packageable-module) (Recommended)
 
 # Creating Module Packages
 
